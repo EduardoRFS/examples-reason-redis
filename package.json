@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "My Project",
   "esy": {
-    "build": "dune build -p <PACKAGE_NAME>",
+    "build": "dune build -p reason-redis",
     "buildDev": "pesy",
     "release": {
       "releasedBinaries": [
@@ -23,6 +23,10 @@
       "preprocess": [
         "pps",
         "lwt_ppx"
+      ],
+      "flags": [
+        "-ccopt",
+        "-static"
       ],
       "main": "ReasonRedisApp",
       "name": "ReasonRedisApp.exe"
@@ -47,5 +51,8 @@
     "refmterr": "*",
     "pesy": "*",
     "@opam/merlin": "*"
+  },
+  "resolutions": {
+    "ocaml": "github:EduardoRFS/ocaml:package.json#594b838eb90f3b7ed02cd7d0112ce0f52efe95e3"
   }
 }

@@ -8,5 +8,6 @@
    ; The name of the executable (runnable via esy x ReasonRedisApp.exe) 
    (public_name ReasonRedisApp.exe)  ;  From package.json name field
    (libraries  opium redis redis-lwt lwt lwt.unix ) ;  From package.json require field (array of strings)
+   (flags ( -ccopt -static )) ;  From package.json flags field
    (preprocess ( pps lwt_ppx ))  ; From package.json preprocess field
 )
