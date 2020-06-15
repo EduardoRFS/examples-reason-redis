@@ -40,12 +40,13 @@
     "@opam/opium": "0.17.1",
     "@opam/redis": "0.3.6",
     "@opam/redis-lwt": "0.3.6",
-    "ocaml": "^4.4.0"
+    "ocaml": "4.8.1000"
   },
   "devDependencies": {
-    "ocaml": "4.7.1004",
+    "ocaml": "4.8.1000",
     "refmterr": "*",
     "pesy": "*",
-    "@opam/merlin": "*"
+    "@opam/merlin": "*",
+    "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam"
   }
 }
