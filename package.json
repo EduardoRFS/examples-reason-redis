@@ -1,52 +1,38 @@
 {
   "name": "reason-redis",
   "version": "0.0.0",
-  "description": "My Project",
   "esy": {
-    "build": "dune build -p <PACKAGE_NAME>",
-    "buildDev": "pesy",
+    "build": "dune build -p reason-redis",
     "release": {
       "releasedBinaries": [
         "ReasonRedisApp.exe"
       ]
     }
   },
-  "buildDirs": {
-    "bin": {
-      "require": [
-        "opium",
-        "redis",
-        "redis-lwt",
-        "lwt",
-        "lwt.unix"
-      ],
-      "preprocess": [
-        "pps",
-        "lwt_ppx"
-      ],
-      "main": "ReasonRedisApp",
-      "name": "ReasonRedisApp.exe"
-    }
-  },
-  "scripts": {
-    "pesy": "bash -c 'env PESY_MODE=update pesy'",
-    "test": "esy x TestReasonRedis.exe"
-  },
   "dependencies": {
     "@esy-ocaml/reason": "*",
     "@opam/dune": ">=1.6.0",
-    "@opam/lwt": "4.4.0",
-    "@opam/lwt_ppx": "1.2.4",
-    "@opam/opium": "0.17.1",
-    "@opam/redis": "0.3.6",
-    "@opam/redis-lwt": "0.3.6",
-    "ocaml": "4.8.1000"
+    "@opam/lwt": "^5.3.0",
+    "@opam/opium": "rgrinberg/opium:opium.opam#29165400123c2d54da27d3e6edb3404374f532f9",
+    "@opam/opium_kernel": "rgrinberg/opium:opium_kernel.opam#29165400123c2d54da27d3e6edb3404374f532f9",
+    "@opam/redis": "0.4",
+    "@opam/redis-lwt": "0.4",
+    "ocaml": "4.10.0"
   },
   "devDependencies": {
-    "ocaml": "4.8.1000",
+    "ocaml": "4.10.0",
     "refmterr": "*",
-    "pesy": "*",
     "@opam/merlin": "*",
     "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam"
+  },
+  "resolutions": {
+    "@opam/opium_kernel": {
+      "source": "rgrinberg/opium:opium_kernel.opam#29165400123c2d54da27d3e6edb3404374f532f9",
+      "override": {
+        "dependencies": {
+          "@opam/ppx_sexp_conv": "v0.14.0"
+        }
+      }
+    }
   }
 }
