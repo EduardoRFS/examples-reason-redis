@@ -9,6 +9,9 @@
       ]
     }
   },
+  "scripts": {
+    "start": "esy x ReasonRedisApp.exe"
+  },
   "dependencies": {
     "@esy-ocaml/reason": "*",
     "@opam/dune": ">=1.6.0",
