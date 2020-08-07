@@ -1,12 +1,4 @@
-
-; !!!! This dune file is generated from the package.json file by pesy. If you modify it by hand
-; !!!! your changes will be undone! Instead, edit the package.json and then rerun 'esy pesy' at the project root.
-; !!!! If you want to stop using pesy and manage this file by hand, change package.json's 'esy.build' command to: refmterr dune build -p  reason-redis
 (executable
-   ; The entrypoint module
-   (name ReasonRedisApp)  ;  From package.json main field
-   ; The name of the executable (runnable via esy x ReasonRedisApp.exe) 
-   (public_name ReasonRedisApp.exe)  ;  From package.json name field
-   (libraries  opium redis redis-lwt lwt lwt.unix ) ;  From package.json require field (array of strings)
-   (preprocess ( pps lwt_ppx ))  ; From package.json preprocess field
-)
+ (name ReasonRedisApp)
+ (public_name ReasonRedisApp.exe)
+ (libraries opium redis redis-lwt lwt lwt.unix))

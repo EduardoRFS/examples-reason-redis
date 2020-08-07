@@ -1,2 +1,3 @@
-(lang dune 1.6)
- (name reason-redis)
+(lang dune 2.0)
+
+(name reason-redis)
