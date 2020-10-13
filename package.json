@@ -20,10 +20,10 @@
     "@opam/opium_kernel": "rgrinberg/opium:opium_kernel.opam#29165400123c2d54da27d3e6edb3404374f532f9",
     "@opam/redis": "0.4",
     "@opam/redis-lwt": "0.4",
-    "ocaml": "4.10.0"
+    "ocaml": "~4.10.0"
   },
   "devDependencies": {
-    "ocaml": "4.10.0",
+    "ocaml": "~4.10.0",
     "refmterr": "*",
     "@opam/merlin": "*",
     "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam"
